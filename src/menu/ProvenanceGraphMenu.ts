@@ -36,10 +36,10 @@ export class ProvenanceGraphMenu {
       .attr('class', 'navbar-nav')
       .attr('data-clue', 'provenanceGraphList')
       .html(`<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="provenanceGraphDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="provenanceGraphDropdown" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-code-branch fa-lg fa-rotate-180 fa-fw"></i>
         </a>
-        <div class="dropdown-menu" id="provenancegraph_list" aria-labelledby="provenanceGraphDropdown">
+        <div class="dropdown-menu" data-bs-popper="none" id="provenancegraph_list" aria-labelledby="provenanceGraphDropdown">
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" id="provenancegraph_import">
             <i class="fas fa-upload" aria-hidden="true"></i> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.import')}
@@ -167,10 +167,10 @@ export class ProvenanceGraphMenu {
                 <div class="col-sm-9">${nnodes}/${nedges}</div>
             </div>
             <div class="row">
-                <div class="col-sm-12 text-right">
-                    <button class="btn btn-primary" ${!UserSession.getInstance().isLoggedIn() && !graph.local ? 'disabled="disabled"' : ''} data-action="select" data-toggle="modal"><span class="fas fa-folder-open" aria-hidden="true"></span> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.select')}</button>
-                    <button class="btn btn-primary" data-action="clone" data-toggle="modal"><span class="fas fa-clone" aria-hidden="true"></span> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.clone')}</button>
-                    <button class="btn btn-danger" ${!UserSession.getInstance().isLoggedIn() && !graph.local ? 'disabled="disabled"' : ''} data-toggle="modal"><i class="fas fa-trash" aria-hidden="true"></i> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.delete')}</button>
+                <div class="col-sm-12 text-end">
+                    <button class="btn btn-primary" ${!UserSession.getInstance().isLoggedIn() && !graph.local ? 'disabled="disabled"' : ''} data-action="select" data-bs-toggle="modal"><span class="fas fa-folder-open" aria-hidden="true"></span> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.select')}</button>
+                    <button class="btn btn-primary" data-action="clone" data-bs-toggle="modal"><span class="fas fa-clone" aria-hidden="true"></span> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.clone')}</button>
+                    <button class="btn btn-danger" ${!UserSession.getInstance().isLoggedIn() && !graph.local ? 'disabled="disabled"' : ''} data-bs-toggle="modal"><i class="fas fa-trash" aria-hidden="true"></i> ${I18nextManager.getInstance().i18n.t('phovea:clue.provenanceMenu.delete')}</button>
                 </div>
             </div>
         </div>`);

@@ -76,9 +76,9 @@
   "dependencies": {
     "d3": "~3.5.17",
     "marked": "1.2.5",
-    "phovea_core": "github:phovea/phovea_core#vstoiber/bootstrap_v4",
-    "phovea_security_flask": "github:phovea/phovea_security_flask#bootstrap-v4",
-    "phovea_ui": "github:phovea/phovea_ui#bootstrap-v4"
+    "phovea_core": "github:phovea/phovea_core#vstoiber/bootstrap_v5",
+    "phovea_security_flask": "github:phovea/phovea_security_flask#vstoiber/bootstrap_v5",
+    "phovea_ui": "github:phovea/phovea_ui#vstoiber/bootstrap_v5"
   },
   "devDependencies": {
     "@types/d3": "~3.5.36",

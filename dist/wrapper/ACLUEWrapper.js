@@ -11,7 +11,7 @@ const getTemplate = () => `<div class="box">
   <div class="content">
     <main data-anchor="main"></main>
     <!--annotation toolbar-->
-    <aside class="annotations" style="display:none">
+    <aside class="annotations">
       <div>
         <h2>${I18nextManager.getInstance().i18n.t('phovea:clue.ClueWrapper.annotations')}</h2>
       </div>

@@ -157,15 +157,15 @@ export class ButtonModeSelector {
         });
     }
     build(parent) {
-        parent.insertAdjacentHTML('beforeend', `<div class="clue_buttonmodeselector btn-group btn-group-toggle" data-toggle="buttons" data-mode="${ModeWrapper.getInstance().getMode().toString()}">
-        <label class="btn btn-${this.options.size} clue-${CLUEMode.modes.Exploration.toString()}${CLUEMode.modes.Exploration === ModeWrapper.getInstance().getMode() ? ' active' : ''}">
-           <input type="radio" name="clue_mode" autocomplete="off" value="${CLUEMode.modes.Exploration.toString()}" ${CLUEMode.modes.Exploration === ModeWrapper.getInstance().getMode() ? 'checked="checked"' : ''}> ${I18nextManager.getInstance().i18n.t('phovea:clue.exploration')}
+        parent.insertAdjacentHTML('beforeend', `<div class="clue_buttonmodeselector btn-group" role="group" data-mode="${ModeWrapper.getInstance().getMode().toString()}">
+        <label for="mode_radio_btngroup_1" class="form-label btn btn-${this.options.size} clue-${CLUEMode.modes.Exploration.toString()}${CLUEMode.modes.Exploration === ModeWrapper.getInstance().getMode() ? ' active' : ''}">
+          <input type="radio" class="btn-check" id="mode_radio_btngroup_1" name="clue_mode" autocomplete="off" value="${CLUEMode.modes.Exploration.toString()}" ${CLUEMode.modes.Exploration === ModeWrapper.getInstance().getMode() ? 'checked="checked"' : ''}>${I18nextManager.getInstance().i18n.t('phovea:clue.exploration')}
         </label>
-        <label class="btn btn-${this.options.size} clue-${CLUEMode.modes.Authoring.toString()}${CLUEMode.modes.Authoring === ModeWrapper.getInstance().getMode() ? ' active' : ''}">
-           <input type="radio" name="clue_mode" autocomplete="off" value="${CLUEMode.modes.Authoring.toString()}" ${CLUEMode.modes.Authoring === ModeWrapper.getInstance().getMode() ? 'checked="checked"' : ''}> ${I18nextManager.getInstance().i18n.t('phovea:clue.authoring')}
+        <label for="mode_radio_btngroup_2" class="form-label btn btn-${this.options.size} clue-${CLUEMode.modes.Authoring.toString()}${CLUEMode.modes.Authoring === ModeWrapper.getInstance().getMode() ? ' active' : ''}">
+          <input type="radio" class="btn-check" id="mode_radio_btngroup_2" name="clue_mode" autocomplete="off" value="${CLUEMode.modes.Authoring.toString()}" ${CLUEMode.modes.Authoring === ModeWrapper.getInstance().getMode() ? 'checked="checked"' : ''}>${I18nextManager.getInstance().i18n.t('phovea:clue.authoring')}
         </label>
-        <label class="btn btn-${this.options.size} clue-${CLUEMode.modes.Presentation.toString()}${CLUEMode.modes.Presentation === ModeWrapper.getInstance().getMode() ? ' active' : ''}">
-            <input type="radio" name="clue_mode" autocomplete="off" value="${CLUEMode.modes.Presentation.toString()}" ${CLUEMode.modes.Presentation === ModeWrapper.getInstance().getMode() ? 'checked="checked"' : ''}> ${I18nextManager.getInstance().i18n.t('phovea:clue.presentation')}
+        <label for="mode_radio_btngroup_3" class="form-label btn btn-${this.options.size} clue-${CLUEMode.modes.Presentation.toString()}${CLUEMode.modes.Presentation === ModeWrapper.getInstance().getMode() ? ' active' : ''}">
+          <input type="radio" class="btn-check" id="mode_radio_btngroup_3" name="clue_mode" autocomplete="off" value="${CLUEMode.modes.Presentation.toString()}" ${CLUEMode.modes.Presentation === ModeWrapper.getInstance().getMode() ? 'checked="checked"' : ''}>${I18nextManager.getInstance().i18n.t('phovea:clue.presentation')}
         </label>
     </div>`);
         Array.from(parent.lastElementChild.querySelectorAll('label')).forEach((label) => {

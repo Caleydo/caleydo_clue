@@ -6,7 +6,7 @@ import {VerticalStoryVis} from './storyvis';
 export class VisLoader {
 
   static loadProvenanceGraphVis(data:Promise<ProvenanceGraph>, parent:Element, options = {}): ()=>Promise<LayoutedProvVis> {
-    parent.insertAdjacentHTML('beforeend', `<aside class="provenance-layout-vis"></aside>`);
+    parent.insertAdjacentHTML('beforeend', `<aside class="provenance-sidepanel provenance-layout-vis"></aside>`);
     let c: Promise<LayoutedProvVis>;
     return () => {
       if (!c) {
@@ -17,7 +17,7 @@ export class VisLoader {
   }
 
   static loadStoryVis(graph: Promise<ProvenanceGraph>, parent: HTMLElement, main: HTMLElement, options: {thumbnails: boolean}): ()=>Promise<VerticalStoryVis> {
-    parent.insertAdjacentHTML('beforeend', `<aside class="provenance-story-vis"></aside>`);
+    parent.insertAdjacentHTML('beforeend', `<aside class="provenance-sidepanel provenance-story-vis"></aside>`);
     let c: Promise<VerticalStoryVis>;
     return () => {
       if (!c) {

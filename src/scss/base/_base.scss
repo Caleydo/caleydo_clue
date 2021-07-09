@@ -35,7 +35,7 @@ label {
   }
 }
 
-aside {
+aside.provenance-sidepanel {
   border: 2px solid $core_colour;
   border-radius: 5px;
   margin: 2px;
@@ -236,7 +236,7 @@ $clue_triangle_width: 30px;
   .clue_trianglemodeselector {
     circle.point {
       fill: red;
-      stroke: lighten(red, 0.3);
+      stroke: tint-color(red, 0.3);
       stroke-width: 2;
       cursor: crosshair;
     }

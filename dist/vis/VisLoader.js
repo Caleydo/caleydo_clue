@@ -1,6 +1,6 @@
 export class VisLoader {
     static loadProvenanceGraphVis(data, parent, options = {}) {
-        parent.insertAdjacentHTML('beforeend', `<aside class="provenance-layout-vis"></aside>`);
+        parent.insertAdjacentHTML('beforeend', `<aside class="provenance-sidepanel provenance-layout-vis"></aside>`);
         let c;
         return () => {
             if (!c) {
@@ -10,7 +10,7 @@ export class VisLoader {
         };
     }
     static loadStoryVis(graph, parent, main, options) {
-        parent.insertAdjacentHTML('beforeend', `<aside class="provenance-story-vis"></aside>`);
+        parent.insertAdjacentHTML('beforeend', `<aside class="provenance-sidepanel provenance-story-vis"></aside>`);
         let c;
         return () => {
             if (!c) {
